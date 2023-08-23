@@ -1,0 +1,531 @@
+/* @media only screen and (min-width: 1800px) {
+    .item .content {
+        position: absolute;
+        z-index: 1000;
+        top: 50%;
+        left: 40%;
+        max-width: 50%;
+        transform: translateX(-50%);
+        transform: translateY(-50%);
+    }
+} */
+
+.font-cqn {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.slick-arrow {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    font-size: 38px;
+    color: rgb(220, 200, 160);
+    opacity: .4;
+    border: none;
+}
+
+.slick-arrow:hover {
+    opacity: 1;
+}
+
+.slick-arrow:focus,
+.slick-arrow:active {
+    border: none;
+}
+
+.slick-prev {
+    left: 20px;
+}
+
+.slick-next {
+    right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .slick-prev {
+        left: 10px;
+    }
+
+    .slick-next {
+        right: 10px;
+    }
+}
+
+.modal-backdrop {
+    z-index: 99;
+}
+
+#openMenu {
+    display: none;
+}
+
+.blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100vw;
+    background-color: black;
+    opacity: .5;
+    height: 100vh;
+    display: none;
+}
+
+.mobile-nav {
+    position: fixed;
+    z-index: 100;
+    background-color: #fff;
+    width: 70vw;
+    height: 100vh;
+    top: 0;
+    left: 1000;
+    display: none;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.noti {
+    position: fixed;
+    bottom: 20px;
+    color: #fff;
+    right: 20px;
+    transition: .4s;
+    z-index: 999;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.noti button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+
+/* Make the image fully responsive */
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.item {
+    position: relative;
+}
+
+.item .banner .banner-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    background-color: black;
+    z-index: 999;
+}
+
+.post-body {
+    height: 160px;
+}
+
+.item .banner img {
+    overflow: hidden;
+    width: 100%;
+    min-height: 60vh;
+    max-height: 90vh;
+    object-fit: cover;
+}
+
+.item .content {
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 0px;
+    right: 0px;
+    width: 60%;
+    margin: 0px auto;
+    transform: translateY(-50%);
+}
+
+.ins-card .img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    max-height: 270px;
+    overflow: hidden;
+}
+
+.ins-card .img a {
+    position: absolute;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    transition: .4s;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.ins-card:hover .img a {
+    bottom: 20px;
+}
+
+.review {
+    height: 520px;
+}
+
+.ins-card .img .blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 10;
+}
+
+.course-card {
+    height: 500px;
+}
+
+.course-desc {
+    max-height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.link-1 {
+    color: var(--primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.link-1:hover {
+    text-decoration: none;
+}
+
+.link-2 {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.link-2:hover {
+    color: rgb(220, 200, 160);
+    text-decoration: none;
+}
+
+.for-guitar {
+    display: none;
+}
+
+.show-1-line {
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 20px;
+    -webkit-line-clamp: 1;
+    height: 60px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.show-2-line {
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 25px;
+    -webkit-line-clamp: 2;
+    height: 60px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.show-3-line {
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 20px;
+    -webkit-line-clamp: 3;
+    height: 60px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.instrument {
+    height: auto;
+}
+
+.ins-name {
+    height: 60px;
+}
+
+.ins-desc {
+    height: 50px;
+}
+
+.post-content {
+    width: 100%;
+}
+
+.post-content img {
+    width: 80%;
+}
+
+.zalo {
+    position: fixed;
+    bottom: 120px;
+    left: 20px;
+    background-color: #54a0ff;
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    transition: .4s;
+    cursor: pointer;
+    z-index: 100000;
+}
+
+.zalo-parent {
+    position: fixed;
+    bottom: 120px;
+    left: 20px;
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    transition: .4s;
+    cursor: pointer;
+    transform: scale(1.2);
+    z-index: 90000;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.hotline {
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+    background-color: #ee5253;
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 100000;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.hotline:hover {
+    animation: shake 0.6s ease-in-out infinite;
+    -webkit-animation: shake 0.6s ease-in-out infinite;
+}
+
+.info-hotline {
+    position: fixed;
+    bottom: -1000%;
+    left: 90px;
+    background-color: transparent;
+    border: 3px solid #ee5253;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 9px;
+    font-family: 'Times New Roman', Times, serif;
+    transition: .6s;
+    z-index: 100001;
+}
+
+.hotline-a:hover .info-hotline {
+    bottom: 35px;
+    transition: .6s;
+}
+
+
+
+.hotline-scale-1 {
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+    background-color: transparent;
+    border: 1px solid #ee5253;
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 100001;
+    animation: shake 0.6s ease-in-out infinite;
+    -webkit-animation: scale 3s ease-in-out infinite;
+}
+
+.hotline-scale-2 {
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+    background-color: transparent;
+    border: 1px solid #ee5253;
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 100001;
+    animation: shake 0.6s ease-in-out infinite;
+    -webkit-animation: scale 5s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+.back-to-top {
+    border-radius: 50px;
+    bottom: 90px;
+}
+
+.zalo:hover,
+.hotline:hover,
+.info-hotline:hover {
+    color: #fff;
+    opacity: 1;
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+.search .img {
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.service_price {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    margin: 0 auto;
+}
+
+.descrease {
+    background-color: red;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.rounded {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.p-title {
+    transform: translateY(-50%);
+    left: 10px
+}
+
+.sales {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    padding: 10px;
+    flex-direction: column;
+    background-image: url(san-pham/28273/guitar-nhan-om06-1691398175);
+    background-image: url(https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/4323ad4….jpg), linear-gradient(-90deg, #f0451e 9%, #f32424 96%);
+}
+
+@media only screen and (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    #openMenu {
+        display: block;
+        background-color: #fff;
+        border: none;
+        font-size: 18px;
+    }
+
+    .item .content {
+        top: 50%;
+        left: 0;
+        padding: 0 20px;
+        width: 100%;
+        transform: translateY(-50%);
+        transform: translateX(0%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+    }
+
+    .course-card {
+        height: auto;
+    }
+}
+
+
+/* Min css custom */
