@@ -23,7 +23,7 @@
                                             class="link-1 w-100">{{ $catalogue->name }}</a>
                                     </div>
                                 @endforeach
-                                <div class="mt-3 w-100 border-top pt-3">
+                                <div class="mt-3 w-100 border-top pt-3 font-weight-bold text-primary pl-3">
                                     <i class="zmdi zmdi-check mr-3"></i><a href="{{ route('sheet.index') }}"
                                         class="link-1 w-100">Sheet nhạc</a>
                                 </div>

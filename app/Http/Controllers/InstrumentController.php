@@ -37,7 +37,7 @@ class InstrumentController extends Controller
     public function seeAll(Request $request)
     {
         $instruments = Instrument::filter($request->type, $request->brand_id, $request->type_id, $request->design_id);
-        
+
         // Get the brand_id values
         $type = $request->type;
         $brand_id = $request->brand_id;

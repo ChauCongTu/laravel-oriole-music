@@ -191,34 +191,52 @@
                                             <a href="{{ route('quan-ly-sheet-nhac.index') }}">
                                                 <i class="zmdi zmdi-collection-music"></i>Quản lý sheets nhạc</a>
                                         </li>
-                                        <li class="nav-item-n border-bottom">
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-danger my-2 text-center" id="show-lv-2"
+                                                style="z-index: 10; border-radius: 20px">
+                                                Xem thêm chức năng
+                                                <i class="zmdi zmdi-chevron-down"></i>
+                                            </button>
+                                        </div>
+                                        <li class="nav-item-n border-bottom lv-2 d-none">
                                             <a href="{{ route('quan-ly-loai-san-pham.index') }}">
                                                 <i class="zmdi zmdi-collection-bookmark"></i>Quản lý danh mục SP</a>
                                         </li>
-                                        <li class="nav-item-n border-bottom">
+                                        <li class="nav-item-n border-bottom lv-2 d-none">
                                             <a href="{{ route('quan-ly-thuong-hieu.index') }}">
                                                 <i class="zmdi zmdi-bookmark"></i>Quản lý thương hiệu</a>
                                         </li>
-                                        <li class="nav-item-n border-bottom">
+                                        <li class="nav-item-n border-bottom lv-2 d-none">
                                             <a href="{{ route('quan-ly-kieu-dan.index') }}">
                                                 <i class="zmdi zmdi-widgets"></i>Quản lý kiểu dáng đàn</a>
                                         </li>
-                                        <li class="nav-item-n border-bottom">
+                                        <li class="nav-item-n border-bottom lv-2 d-none">
                                             <a href="{{ route('quan-ly-loai-dan.index') }}">
                                                 <i class="zmdi zmdi-store-24"></i>Quản lý loại đàn</a>
                                         </li>
-                                        <li class="nav-item-n border-bottom">
+                                        <li class="nav-item-n border-bottom lv-2 d-none">
                                             <a href="{{ route('quan-ly-san-pham.index') }}">
                                                 <i class="zmdi zmdi-mall"></i>Quản lý sản phẩm</a>
                                         </li>
-                                        <li class="nav-item-n border-bottom">
+                                        <li class="nav-item-n border-bottom lv-2 d-none">
                                             <a href="{{ route('quan-ly-danh-gia.index') }}">
-                                            <i class="zmdi zmdi-star"></i>Quản lý đánh giá</a>
+                                                <i class="zmdi zmdi-star"></i>Quản lý đánh giá</a>
                                         </li>
-                                        <li class="nav-item-n">
+                                        <li class="nav-item-n border-bottom lv-2 d-none">
                                             <a href="{{ route('quan-ly-nguoi-dung.index') }}">
                                                 <i class="zmdi zmdi-account"></i>Quản lý người dùng</a>
                                         </li>
+                                        <li class="nav-item-n border-bottom lv-2 d-none">
+                                            <a href="{{ route('quan-ly-giang-vien.index') }}">
+                                                <i class="zmdi zmdi-account-o"></i>Quản lý giảng viên</a>
+                                        </li>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-danger my-2 text-center d-none"
+                                                id="hide-lv-2" style="z-index: 10; border-radius: 20px">
+                                                Ẩn bớt chức năng
+                                                <i class="zmdi zmdi-chevron-up"></i>
+                                            </button>
+                                        </div>
                                     </ul>
                                 </nav>
                             </aside>
@@ -232,6 +250,7 @@
                                             <p>Copyright © {{ date('Y') }} <b>Oriole</b>. All rights reserved.
                                                 Template by <a href="https://colorlib.com">Colorlib</a>.
                                             </p>
+                                            <p>Dev by <a href="https://chaucongtu.site" target="_blank">NhonCQ</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -257,6 +276,20 @@
     <script src="{{ asset('vendor/select2/select2.min.js') }}"></script>
     <!-- Main JS-->
     <script src="{{ asset('js/main.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#show-lv-2').click(function() {
+                $('#show-lv-2').addClass('d-none');
+                $('.lv-2').removeClass('d-none');
+                $('#hide-lv-2').removeClass('d-none');
+            });
+            $('#hide-lv-2').click(function() {
+                $('#hide-lv-2').addClass('d-none');
+                $('.lv-2').addClass('d-none');
+                $('#show-lv-2').removeClass('d-none');
+            });
+        });
+    </script>
     @yield('scripts')
 </body>
 

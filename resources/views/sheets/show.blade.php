@@ -19,11 +19,14 @@
                     <div class="mb-5">
                         <div class="section-title position-relative d-flex justify-content-between">
                             <div class="col-4">
-                                <img class="w-100 mb-4" src="{{ asset($sheet->image) }}" alt="Image">
+                                <a href="{{ asset($sheet->image) }}" target="_blank">
+                                    <img class="w-100 mb-4" src="{{ asset($sheet->image) }}" alt="Image">
+                                </a>
                             </div>
                             <div class="col-8">
                                 <div class="ml-3"><span class="h3">{{ $sheet->name }}</span>
-                                    <div class="mt-3 h5"><x-price :price='$sheet->price' :discount='$sheet->discount' :to='$sheet->discount_to' /></div>
+                                    <div class="mt-3 h5"><x-price :price='$sheet->price' :discount='$sheet->discount' :to='$sheet->discount_to' />
+                                    </div>
                                     <div class="mt-3"><a
                                             href="{{ route('checkout', ['type' => 'Sheet nhạc', 'id' => $sheet->id]) }}"
                                             class="btn btn-primary">Đặt mua ngay</a></div>
@@ -49,7 +52,8 @@
                                         <img src="{{ asset($sheet->image) }}" width="45px" alt="">
                                     </div>
                                     <div class="ml-3">
-                                        <a href="" class="link-1 font-weight-bold">{{ $sheet->name }}</a>
+                                        <a href="{{ route('sheet.show', ['id' => $sheet->id, 'slug' => $sheet->slug]) }}"
+                                            class="link-1 font-weight-bold">{{ $sheet->name }}</a>
                                         <x-price :price='$sheet->price' :discount='$sheet->discount' :to='$sheet->discount_to' />
                                     </div>
                                 </div>

@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\InstrumentManagementController;
 use App\Http\Controllers\Admin\PostManagementController;
 use App\Http\Controllers\Admin\ServiceManagementController;
 use App\Http\Controllers\Admin\SheetsManagementController;
+use App\Http\Controllers\Admin\TeacherManagementController;
 use App\Http\Controllers\Admin\TypeManangementController;
 use App\Http\Controllers\Admin\UserManagementController;
 use App\Http\Controllers\AdminController;
@@ -23,9 +24,11 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\SheetController;
 use App\Http\Controllers\InstrumentController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\TeacherController;
 use App\Models\Brand;
 use App\Models\Catalogue;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,7 +44,9 @@ use Illuminate\Support\Facades\Route;
 
 // Bật bảo trì bằng cách comment đoạn code dưới đây
 
-// Route::get('/{path?}', [HomeController::class, 'maintain'])->where(['path' => '.+']);
+// Route::get('/{path?}', function() {
+//     return Hash::make('123456');
+// })->where(['path' => '.+']);
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/tim-kiem', [HomeController::class, 'search'])->name('search');
@@ -84,6 +89,9 @@ Route::get('/san-pham', [InstrumentController::class, 'seeAll'])->name('instrume
 Route::get('/sheet-nhac/{id}/{slug}', [SheetController::class, 'show'])->name('sheet.show');
 Route::get('/sheet-nhac', [SheetController::class, 'index'])->name('sheet.index');
 
+// Teacher route
+Route::get('/thong-tin-giang-vien/{name?}', [TeacherController::class, 'show'])->name('giang-vien.show');
+
 // Admin route
 Route::prefix('admin')->middleware('auth.login')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
@@ -96,6 +104,7 @@ Route::prefix('admin')->middleware('auth.login')->group(function () {
     Route::resource('/quan-ly-thuong-hieu', BrandManangementController::class);
     Route::resource('/quan-ly-loai-san-pham', CatalogueManangementController::class);
     Route::resource('/quan-ly-kieu-dan', DesignManangementController::class);
+    Route::resource('/quan-ly-giang-vien', TeacherManagementController::class);
     Route::resource('/quan-ly-khoa-hoc', CourseManagementController::class);
     Route::put('/changeDiscount/{id}/khoa-hoc', [CourseManagementController::class, 'changeDiscount'])->name('quan-ly-khoa-hoc.changeDiscount');
     Route::resource('/quan-ly-dich-vu', ServiceManagementController::class);

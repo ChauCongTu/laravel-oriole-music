@@ -71,9 +71,6 @@
             </div>
         </div>
     </div>
-    <div class="notification bg-danger text-white text-center py-3">
-        Thông báo: Trang web sẽ bảo trì 30p từ 19:00 - 19:30 ngày 23/07/2023 để tiến hành nâng cấp. Xin cảm ơn!
-    </div>
     <!-- Navbar Start -->
     <header class="container">
         <div class="d-flex justify-content-between align-items-center">
@@ -90,6 +87,7 @@
                 <a href="{{ route('home') }}" class="nav-item nav-link">Trang Chủ</a>
                 <a href="{{ route('course.index') }}" class="nav-item nav-link">Khóa học</a>
                 <a href="{{ route('service.index') }}" class="nav-item nav-link">Dịch vụ</a>
+                <a href="{{ route('giang-vien.show') }}" class="nav-item nav-link">Giảng viên</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sản phẩm</a>
                     <div class="dropdown-menu m-0">
@@ -161,6 +159,7 @@
         <a href="{{ route('home') }}" class="nav-item nav-link">Trang Chủ</a>
         <a href="{{ route('course.index') }}" class="nav-item nav-link">Khóa học</a>
         <a href="{{ route('service.index') }}" class="nav-link nav-link">Dịch vụ</a>
+        <a href="{{ route('giang-vien.show') }}" class="nav-item nav-link">Giảng viên</a>
         <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sản phẩm</a>
             <div class="dropdown-menu m-0">
@@ -249,7 +248,7 @@
         <div class="container mt-5 pt-5">
             <div class="row">
                 <div class="col-md-6 mb-5">
-                    <a href="index.html" class="navbar-brand">
+                    <a href="{{ route('home') }}" class="navbar-brand">
                         <h1 class="m-0 text-uppercase text-white"><img class="icon-primary" src="img/icon-white.png"
                                 alt=""></i>ORIOLE MEDIA</h1>
                     </a>

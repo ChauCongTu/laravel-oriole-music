@@ -13,12 +13,12 @@
                         <form action="{{ route('instrument.all') }}" method="get" class="w-100 container">
                             <div class="w-100">
                                 <div class="h5 font-weight-bold text-uppercase">Danh mục sản phẩm</div>
-                                <div class="mt-3 w-100 border-top pt-3">
+                                <div class="mt-3 w-100 border-top pt-3 {{ $type == null ? 'font-weight-bold text-primary pl-3' : false }}">
                                     <i class="zmdi zmdi-check mr-3"></i><a href="{{ route('instrument.all') }}"
                                         class="link-1 w-100">Tất cả sản phẩm</a>
                                 </div>
                                 @foreach ($catalogues as $catalogue)
-                                    <div class="mt-3 w-100 border-top pt-3">
+                                    <div class="mt-3 w-100 border-top pt-3 {{ $type == $catalogue->slug ? 'font-weight-bold text-primary pl-3' : false }}">
                                         <i class="zmdi zmdi-check mr-3"></i><a href="?type={{ $catalogue->slug }}"
                                             class="link-1 w-100">{{ $catalogue->name }}</a>
                                     </div>
